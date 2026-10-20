@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'calSans';
+    src: url('../assets/fonts/Cal_Sans/CalSans-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'calSans', sans-serif;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Contenedor del header que contiene todo lo de arriba de la pagina */
+.header-principal {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px 0px 15px;
+    background-color: #D9D9D9;
+    align-items: center;
+}
+
+/* Titulo de la pagina */
+.logo {
+    display: inline-block;
+    font-size: 15px;
+    letter-spacing: 6px;
+}
+
+/* cerca de ti | hazte vendedor */
+.nav-enlaces {
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+/* Contiene todo lo de iniciar sesion, input de busqueda e iconos */
+.acciones-usuario {
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+}
+
+/* Link del texto "iniciar sesion" */
+.link-sesion {
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.contenedor-busqueda {
+    display: flex;
+    align-items: center;
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 5px 15px;
+    background-color: #C2C2C2; 
+}
+
+/* Input de busqueda */
+.contenedor-busqueda input[type="search"] {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-family: 'calSans', sans-serif;
+    font-weight: bold;
+    padding: 5px;
+}
+
+/* la imagen de la lupa del contenedor de busqueda */
+.contenedor-busqueda img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+/* icono de usuario */
+.icono-usuario img {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+}
+
+/* Icono del carrito */
+.icono-carrito img {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+}
