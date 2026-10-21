@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'calSans';
-    src: url('../assets/fonts/Cal_Sans/CalSans-Regular.ttf') format('ttf');
+    src: url('../assets/fonts/Cal_Sans/CalSans-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -10,7 +10,11 @@ body {
     padding: 0px;
     margin: 0px;
     font-family: 'calSans', sans-serif;
-    font-weight: bold;
+    background-image: url(../assets/img/Index-images/liquid\ metal\ 2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 a{
@@ -55,6 +59,7 @@ a{
     padding: 5px 10px;
 }
 
+/* contenedor del input de busqueda y su icono de lupa */
 .contenedor-busqueda {
     display: flex;
     align-items: center;
@@ -93,4 +98,147 @@ a{
     display: inline-block;
     width: 35px;
     height: 35px;
+}
+
+/* Seccion del eslogan de la pagina */
+.hero-principal {
+    display: flex;
+    width: 100%;
+    height: 340px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Diseño del texto dentro de la sección del eslogan */
+.hero-principal h1 {
+    text-align: center;
+    font-size: 52px;
+    line-height: 1.15;
+    letter-spacing: -0.5px; /* Un espaciado mucho más sutil */
+    color: #111;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Contiene todos los banners de colores */
+.contenedor-bazar{
+    display: flex;
+    flex-direction: column;
+}
+
+/* cada banner tiene esta clase */
+.banner-categoria{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100px;
+    padding: 0px 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+}
+
+.banner-categoria .enlace-imagen img {
+    width: 123px;        
+    height: 123px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ------------------------------------ */
+/* Color para cada banner */
+.banner-azul {
+    background: linear-gradient(to right, rgba(73, 117, 167, 1), rgba(73, 123, 180, 0.53));
+}
+
+.banner-verde {
+    background: linear-gradient(to right, rgba(72, 104, 55, 0.8), rgba(72, 104, 55, 0.2));
+}
+
+.banner-rojo {
+    background: linear-gradient(to right, rgba(136, 41, 43, 0.8), rgba(136, 41, 43, 0.1));
+}
+
+.banner-cafe {
+    background: linear-gradient(to right, rgba(110, 88, 75, 0.8), rgba(110, 88, 75, 0.18));
+}
+/* ------------------------------------ */
+
+/* Contenido de la información a la derecha(flecha y texto de bazar) */
+.info-derecha{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Texto de la información a la derecha */
+.info-derecha h2 {
+    font-size: 22px;
+    line-height: 1.15;
+    text-align: center; 
+    margin: 0;
+}
+
+.info-derecha .enlace-flecha img {
+    width: 30px;
+    height: auto;
+    display: block;
+}
+
+/* Media queries para dispositivos móviles del main*/
+@media (max-width: 768px) {
+    
+    
+    .hero-principal {
+        height: 250px; 
+    }
+
+    .hero-principal h1 {
+        font-size: 35px; 
+    }
+
+    .banner-categoria {
+        padding: 0 20px;
+        min-height: 90px; 
+    }
+
+    .info-derecha h2 {
+        font-size: 16px;
+    }
+
+    .banner-categoria .enlace-imagen img {
+        width: 50px; 
+        height: 50px;
+    }
+
+    .info-derecha .enlace-flecha img {
+        width: 20px;
+    }
+}
+
+/* media queries para dispositivos móviles del header */
+@media (max-width: 768px) {
+    .header-principal {
+        flex-wrap: wrap; 
+        padding: 15px 20px;
+    }
+
+    .nav-enlaces, 
+    .link-sesion {
+        display: none; 
+    }
+
+    .acciones-usuario {
+        width: 100%; 
+        justify-content: space-between;
+        margin-top: 15px; 
+    }
+
+    .contenedor-busqueda {
+        flex-grow: 1;
+        margin-right: 15px;
+    }
 }
